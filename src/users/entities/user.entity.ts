@@ -1,7 +1,15 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Column, Entity, Index, JoinColumn, ManyToOne } from 'typeorm';
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+} from 'typeorm';
 
 import { BaseEntity } from './../../common/entities/base.entity';
+import { Todo } from './../../todo/entities/todo.entity';
 import { UserRoles } from './../enum/UserRoles.enum';
 
 @Entity('users')
@@ -36,4 +44,8 @@ export class User extends BaseEntity {
   @JoinColumn({ name: 'lastUpdatedBy' })
   @Field(() => User, { nullable: true })
   lastUpdatedBy?: User;
+
+  @OneToMany(() => Todo, (todo) => todo.createdBy, { lazy: true })
+  @Field(() => [Todo])
+  todos: Todo[];
 }

@@ -1,8 +1,8 @@
 {
-  "name": "nest-templates",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "name": "todo-gql",
+  "version": "1.0.0",
+  "description": "todo app using graphql",
+  "author": "dcode",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
