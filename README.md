@@ -30,13 +30,13 @@ yarn start:dev
 npm start:dev
 ```
 
-6. [GraphQL URL](http://localhost:3000/graphql)
+6. [GraphQL URL](http://localhost:3000/graphql) ( GraphQL API )
 
 ```
 http://localhost:3000/graphql
 ```
 
-1. [Auth URL](http://localhost:3000/api/v1/auth)
+1. [Auth URL](http://localhost:3000/api/v1/auth) ( RESTful API )
 
 ```
 http://localhost:3000/api/v1/auth
